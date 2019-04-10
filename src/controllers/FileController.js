@@ -16,4 +16,8 @@ class FileController {
 
         req.io.sockets.in(box._id).emit('file', file);
 
-        return res.json(
+        return res.json(file);
+    }
+}
+
+module.exports = new FileController();
